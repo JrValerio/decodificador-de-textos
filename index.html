@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Decodificador de textos para mensagens secretas."
+    />
+    <link rel="stylesheet" href="/src/input.css" />
+    <link rel="stylesheet" href="./dist/output.css" />
+    <link rel="stylesheet" href="./src/style.css" />
+    <script src="./assets/scripts/index.js" defer></script>
+    <title>Decodificador de Textos</title>
+  </head>
+
+  <body class="bg-lightblue-100 font-['inter']">
+    <!-- Main Content -->
+    <main class="flex-grow-0 w-full max-w-screen-xl mx-auto pb-0 mb-0">
+      <div class="flex flex-col md:flex-row justify-between items-start">
+        <div class="px-4 md:px-4 py-2 md:py-0 mt-7">
+          <img src="./assets/img/Top.svg" alt="Logo Alura" class="h-12" />
+        </div>
+        <div class="flex flex-col md:flex-row justify-between w-full md:pl-4">
+          <!-- Left Section: Input -->
+          <div class="w-full md:w-[680px] p-4 flex flex-col gap-10">
+            <div
+              class="bg-lightblue-100 p-6 rounded-lg shadow-lg flex flex-col min-h-[675px]"
+            >
+              <textarea
+                id="input-texto"
+                class="input-class w-full p-4 bg-lightblue-100 rounded-lg mb-4 mt-7 text-bluedark-300 text-[32px] placeholder-bluedark-300 placeholder:text-lg placeholder:text-[32px]"
+                placeholder="Digite seu texto"
+                rows="4"
+              ></textarea>
+              <div class="mt-auto">
+                <p
+                  class="text-xs text-gray-600 opacity-80 flex items-center mb-4"
+                >
+                  <img
+                    src="./assets/img/bi_exclamation-circle-fill.svg"
+                    alt=""
+                    class="inline-block mr-2"
+                  />Apenas letras minúsculas e sem acento.
+                </p>
+                <div
+                  class="flex justify-between mt-auto flex-col sm:flex-row gap-4"
+                >
+                  <button
+                    id="btn-criptografar"
+                    class="button-class bg-bluedark-300 text-white px-6 py-3 rounded-full flex-1 ml-2"
+                  >
+                    Criptografar
+                  </button>
+                  <button
+                    id="btn-descriptografar"
+                    class="button-class border border-bluedark-300 text-bluedark-300 px-6 py-3 rounded-full flex-1 ml-2"
+                  >
+                    Descriptografar
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Right Section: Output -->
+          <div class="w-full md:w-[400px] p-4 flex flex-col">
+            <div
+              class="bg-white p-6 rounded-lg shadow-lg flex flex-col md:min-h-[675px]"
+            >
+              <textarea
+                id="output-texto"
+                class="textarea-class w-full p-4 rounded-lg bg-transparent text-zinc-700 text-2xl mt-7 hidden output-text"
+                rows="6"
+              ></textarea>
+              <div class="flex-1 flex flex-col justify-center">
+                <img
+                  src="./assets/img/High quality products 1 1.png"
+                  alt=""
+                  class="mx-auto hidden sm:block output-image"
+                />
+                <div
+                  class="text-center text-neutral-700 text-2xl font-bold font-inter leading-[28.80px] mt-4"
+                >
+                  Nenhuma mensagem encontrada
+                </div>
+                <div
+                  class="text-center text-zinc-600 text-base font-normal font-inter leading-normal mt-2"
+                >
+                  Digite um texto que você deseja criptografar ou
+                  descriptografar.
+                </div>
+              </div>
+              <button
+                id="btn-copiar"
+                class="button-class w-full bg-bluedark-300 text-white px-6 py-3 rounded-full hidden copy-button mt-auto"
+              >
+                Copiar
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer class="w-full bg-lightblue-200 p-4 py-2.5">
+      <p class="text-center text-sm">
+        Challenge by
+        <a
+          href="https://cursos.alura.com.br/dashboard"
+          class="text-bluedark-300"
+          target="_blank"
+          >Alura / Oracle Challenges</a
+        >. Coded by
+        <a
+          href="https://www.linkedin.com/in/jrvalerio/"
+          class="text-bluedark-300"
+          target="_blank"
+          >Amaro V S Júnior</a
+        >.
+      </p>
+    </footer>
+  </body>
+</html>
